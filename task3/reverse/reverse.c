@@ -11,7 +11,6 @@
 #define BUFFER_MAX 256
 
 long max(long a, long b);
-void print_usage(const char *program_name);
 void reverse_string(char *dest, const char *src, int dest_length);
 void get_file_name(const char *file_path, char *file_name);
 int join_file_path(const char *working_dir, const char *file_name,
@@ -29,7 +28,6 @@ int create_reverse_file(const char *file_path, const char *reverse_file_path);
 int main(int argc, char **argv) {
 
   if (argc < 2) {
-    print_usage(argv[0]);
     return 0;
   }
 
@@ -41,9 +39,7 @@ int main(int argc, char **argv) {
 
 long max(long a, long b) { return (a <= b) ? b : a; }
 
-void print_usage(const char *program_name) {
-  printf("Usage: %s dir...\n", program_name);
-}
+
 
 void reverse_string(char *dest, const char *src, int dest_length) {
   char temp;
